@@ -21,7 +21,7 @@ public class ImplicitWaitDemo {
 		// System Property for Chrome Driver
 		System.setProperty("webdriver.chrome.driver", "/Users/kapilnegi/Desktop/chromedriver");
 		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS) ;
+		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS) ;
 		// launch Chrome and redirect it to the Base URL
 		driver.get("http://demo.guru99.com/test/guru99home/" );
 		//Maximizes the browser window

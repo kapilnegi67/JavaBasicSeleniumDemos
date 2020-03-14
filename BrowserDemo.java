@@ -1,8 +1,11 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.GeckoDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -24,14 +27,17 @@ public class BrowserDemo {
 		// System Property for Chrome Driver
 		System.setProperty("webdriver.chrome.driver", "/Users/kapilnegi/Desktop/chromedriver");
 
+		ChromeOptions cc_options = new ChromeOptions();
+		cc_options.setPageLoadStrategy(PageLoadStrategy.NONE);
+
 		// System Property for Firefox Driver
-		//System.setProperty("webdriver.gecko.driver", "/Users/kapilnegi/Downloads/geckodriver");
-		//DesiredCapabilities desired_cap = DesiredCapabilities.firefox();
-		//desired_cap.setCapability("marionette", true);
+		System.setProperty("webdriver.gecko.driver", "/Users/kapilnegi/Downloads/geckodriver");
+		FirefoxOptions ff_options = new FirefoxOptions();
+		ff_options.setAcceptInsecureCerts(true);
+		ff_options.setPageLoadStrategy(PageLoadStrategy.NONE);
+		WebDriver driver = new FirefoxDriver(ff_options);
         // Instantiate a ChromeDriver class.
-		WebDriver driver=new ChromeDriver();
-		// Instantiate a FirefoxDriver class.
-		//WebDriver driver=new FirefoxDriver(desired_cap);
+//		WebDriver driver=new ChromeDriver(options);
 
         // Launch Website
 		driver.get("http://www.javatpoint.com/");

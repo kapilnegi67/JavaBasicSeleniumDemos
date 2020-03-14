@@ -30,7 +30,7 @@ public class FramesHandle {
 		    //Clicks the iframe
     
 			System.out.println("*********We are done***************");
-			driver.quit();
+//			driver.quit();
 
 	}
 

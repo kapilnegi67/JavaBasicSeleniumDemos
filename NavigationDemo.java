@@ -25,19 +25,19 @@ public class NavigationDemo {
 		driver.navigate().to("http://www.seleniumframework.com/demo-sites/");
 
 		driver.navigate().refresh();
-		Thread.sleep(5000);
+//		Thread.sleep(5000);
 
 		driver.findElement(By.xpath("//a[@href='http://www.seleniumframework.com/introduction/']")).click();
-		Thread.sleep(5000);
+//		Thread.sleep(5000);
 
 		driver.findElement(By.linkText("What is Selenium")).click();
-		Thread.sleep(5000);
+//		Thread.sleep(5000);
 
 		driver.navigate().back();
-		Thread.sleep(5000);
+//		Thread.sleep(5000);
 
 		driver.navigate().forward();
-		Thread.sleep(5000);
+//		Thread.sleep(5000);
 
 		driver.quit();
 
